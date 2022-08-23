@@ -30,7 +30,7 @@ pipeline {
             steps {
                  echo "--------------------Build-------------------------------"
                  sh 'curl ifconfig.co'
-                 sh 'pwd && cd examples/get-started/hello_world && cp -r /home/ubuntu/esp/hello_world/sdkconfig . && make'
+                 sh 'source /etc/profile.d/esp8266.sh && pwd && cd examples/get-started/hello_world && cp -r /home/ubuntu/esp/hello_world/sdkconfig . && make'
             }
         }
 
