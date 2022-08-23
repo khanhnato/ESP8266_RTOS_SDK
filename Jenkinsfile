@@ -30,8 +30,10 @@ pipeline {
             steps {
                  echo "--------------------Build-------------------------------"
                  sh 'hostname'
-                 sh 'source /etc/profile.d/esp8266.sh && pwd && cd examples/get-started/hello_world && cp -r /home/ubuntu/esp/hello_world/sdkconfig . && make'
-            }
+                 sh '''#!/bin/bash
+                        source /etc/profile.d/esp8266.sh && pwd && cd examples/get-started/hello_world && cp -r /home/ubuntu/esp/hello_world/sdkconfig . && make'
+                    ''' 
+           }
         }
 
     }
