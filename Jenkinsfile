@@ -29,7 +29,7 @@ pipeline {
 
             steps {
                  echo "--------------------Build-------------------------------"
-                 sh 'cd examples/get-started/hello_world && cp -r /home/ubuntu/esp/hello_world/sdkconfig . && make'
+                 sh 'pwd && cd examples/get-started/hello_world && cp -r /home/ubuntu/esp/hello_world/sdkconfig . && make'
             }
         }
 
